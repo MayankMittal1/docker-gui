@@ -5,14 +5,16 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Home from "./pages/Home";
+import GetStarted from "./pages/GetStarted";
+
 
 function App() {
   return (
     <Router>
       <div>
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/getStarted">
+            <GetStarted />
           </Route>
           <Route path="/users">
             <Users />
