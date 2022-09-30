@@ -1,0 +1,33 @@
+.prog-page{
+    background-color: black;
+    height: 100%;
+    width: 70%;
+}
+
+.prog1 {
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    margin: 5%;
+    padding: 5%;
+    background-color: blue;
+}
+
+.image {
+    margin-top: 10%;
+    padding: 5%;
+    border : 2px solid grey;
+    border-radius: 2%;
+}
+
+.cols {
+    padding: 2%;
+    text-align: center;
+}
+
+.rows {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+
+}

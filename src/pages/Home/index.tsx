@@ -39,7 +39,6 @@ const Home = () => {
         </Button>
       </div>
     </Row>
-    
     </>
   );
 };
