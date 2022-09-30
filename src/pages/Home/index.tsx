@@ -1,10 +1,15 @@
 import React from "react";
+import { Col, Row } from "reactstrap";
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <Row>
+        <Col>jfdj</Col>
+        <Col>jfdj</Col>
+        <Col>jfdj</Col>
+        <Col>jfdj</Col>
+        <Col>jfdj</Col>
+    </Row>
   );
 };
 
