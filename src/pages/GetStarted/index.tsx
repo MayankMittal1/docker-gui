@@ -1,10 +1,12 @@
 import React from "react";
 import { Button, Col, Row } from "reactstrap";
 import AppCard from "./AppCard";
+import NavBar from "../NavBar/NavBar"
 
 const GetStarted = () => {
   return (
     <>
+      <NavBar />
       <Row
         className="text-center"
         style={{
