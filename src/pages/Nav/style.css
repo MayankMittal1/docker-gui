@@ -1,0 +1,9 @@
+.signup, .login {
+    color: grey;
+    padding: 1%;
+    list-style-type: none;
+}
+
+.logo, .home, .about {
+    padding: 1%;
+}
