@@ -1,14 +1,17 @@
 import React from "react";
-import { Col, Row } from "reactstrap";
+import { Button, Col, Row } from "reactstrap";
 
 const Home = () => {
   return (
     <Row>
-        <Col>jfdj</Col>
-        <Col>jfdj</Col>
-        <Col>jfdj</Col>
-        <Col>jfdj</Col>
-        <Col>jfdj</Col>
+      <Col>jfdj</Col>
+      <Col>jfdj</Col>
+      <Col>jfdj</Col>
+      <Col>jfdj</Col>
+      <Col>jfdj</Col>
+      <Col>
+        <Button>ABC</Button>
+      </Col>
     </Row>
   );
 };
