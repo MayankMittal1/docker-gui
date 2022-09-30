@@ -1,30 +1,19 @@
-import React, { useState } from "react";
-import {
-  Navbar,
-  NavbarProps,
-} from "reactstrap";
-import NavBar from "../Nav";
-import Searchbar from "../Searchbar"
-import Image from "../Image"
+import React from "react";
+import { Button, Col, Row } from "reactstrap";
 
-function Example(
-  args: JSX.IntrinsicAttributes &
-    JSX.IntrinsicClassAttributes<Navbar> &
-    Readonly<NavbarProps>
-) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
+const Home = () => {
   return (
-    <>
-    <NavBar></NavBar>
-    <Searchbar></Searchbar>
-    <Image></Image>
-    </>
-  ) 
-  
-  }
+    <Row>
+      <Col>jfdj</Col>
+      <Col>jfdj</Col>
+      <Col>jfdj</Col>
+      <Col>jfdj</Col>
+      <Col>jfdj</Col>
+      <Col>
+        <Button>ABC</Button>
+      </Col>
+    </Row>
+  );
+};
 
-export default Example;
-
+export default Home;
