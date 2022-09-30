@@ -1,9 +1,10 @@
 import React from "react";
 import { Button, Col, Row } from "reactstrap";
-
+import NavBar from "../NavBar/NavBar"
 const Home = () => {
   return (
     <>
+    <NavBar />
     <Row class="align-middle"> 
         <div style={{
           fontSize:"70px",
