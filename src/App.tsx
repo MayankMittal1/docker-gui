@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Home from "./pages/Home";
 import GetStarted from "./pages/GetStarted";
+import Step1 from "./pages/steps/step1";
 
 
 function App() {
@@ -14,7 +15,10 @@ function App() {
       <div>
         <Switch>
           <Route path="/getStarted">
-            <GetStarted />
+            <GetStarted/>
+          </Route>
+          <Route path="/step1">
+            <Step1/>
           </Route>
           <Route path="/users">
             <Users />
