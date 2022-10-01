@@ -1,34 +1,60 @@
-import React, { useState } from "react";
-import { Navbar, NavbarProps, Row } from "reactstrap";
-import "./style.css";
-import NavBar from "../Nav";
-import Search from "../Searchbar";
-import Port from "../Port";
-import Image from "../Image";
-import Variables from "../Variables";
-import Command from "../Command"
-import ProgressBar from "../Step1/ProgressBar";
-
-function Example(
-  args: JSX.IntrinsicAttributes &
-    JSX.IntrinsicClassAttributes<Navbar> &
-    Readonly<NavbarProps>
-) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
+import React from "react";
+import { useHistory } from "react-router-dom";
+import { Button, Row } from "reactstrap";
+import NavBar from "../NavBar/NavBar";
+const Home = () => {
+  const history = useHistory();
   return (
     <>
-      <div className="bigbox">
-        <NavBar></NavBar>
-        
-    
+      <NavBar />
+      <Row className="align-middle">
+        <div
+          style={{
+            fontSize: "70px",
+            fontWeight: "bold",
+            color: "black",
+            textAlign: "center",
+            paddingTop: "80px",
+          }}
+        >
+          DOCKER-GUI
+        </div>
+      </Row>
 
-        <Command></Command>
-      </div>
+      <Row className="align-middle">
+        <div
+          style={{
+            fontSize: "30px",
+            color: "black",
+            textAlign: "center",
+            paddingTop: "40px",
+            paddingBottom: "80px",
+          }}
+        >
+          Dockerise your application with the minimum number of clicks!
+        </div>
+      </Row>
+
+      <Row>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Button
+            color="primary"
+            onClick={() => {
+              history.push("/getStarted");
+            }}
+          >
+            Get Started
+          </Button>
+        </div>
+      </Row>
     </>
   );
-}
+};
 
-export default Example;
+export default Home;

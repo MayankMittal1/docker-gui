@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Row } from "reactstrap";
-import "./style.css";
+import "./style_img.css";
 
 function Image() {
   return (

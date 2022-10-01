@@ -14,7 +14,7 @@ import {
   NavbarText,
   NavbarProps,
 } from "reactstrap";
-import "./style.css";
+import "./style_nav.css";
 
 function NavBar(
   args: JSX.IntrinsicAttributes &
