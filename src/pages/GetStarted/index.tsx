@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Row } from "reactstrap";
 import AppCard from "./AppCard";
-import NavBar from "../NavBar/NavBar"
-
+import NavBar from "../NavBar/NavBar";
+import { supportedApps } from "../../constants/supportedApps";
+import { useHistory } from "react-router-dom";
+import { loadApp } from "../../redux/appSlice";
+import { useAppDispatch } from "../../app/hooks";
 const GetStarted = () => {
+  const [selected, setSelected] = useState<string>("");
+  const history = useHistory();
+  const dispatch = useAppDispatch();
   return (
     <>
       <NavBar />
@@ -26,43 +32,46 @@ const GetStarted = () => {
         <h1> SELECT YOUR APP!</h1>
       </Row>
       <Row>
-        <Col
-          className="d-flex justify-content-center"
-          style={{
-            paddingLeft: "320px",
-          }}
-        >
-          <AppCard isSelected={false} />
-        </Col>
-        <Col className="d-flex justify-content-center">
-          <AppCard isSelected={false} />
-        </Col>
-        <Col
-          className="d-flex justify-content-center"
-          style={{
-            paddingRight: "320px",
-          }}
-        >
-          <AppCard isSelected={true} />
-        </Col>
+        {Object.keys(supportedApps).map((key, i) => {
+          return (
+            <Col className="d-flex justify-content-center" key={i}>
+              <AppCard
+                isSelected={selected === key}
+                apps={supportedApps}
+                type={key}
+                select={() => {
+                  setSelected(key);
+                }}
+                key={i}
+              />
+            </Col>
+          );
+        })}
       </Row>
 
       <Row>
-      <div style={{
-        marginTop: "40px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center"
-      }}>
-        <Button
-          color="primary"
-          href="#"
-          tag="a"
+        <div
+          style={{
+            marginTop: "40px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          Next
-        </Button>
-      </div>
-    </Row>
+          <Button
+            color="primary"
+            disabled={selected === ""}
+            onClick={() => {
+              if (selected && selected !== "") {
+                dispatch(loadApp(selected));
+                history.push(`/create/${selected}`);
+              }
+            }}
+          >
+            Next
+          </Button>
+        </div>
+      </Row>
     </>
   );
 };

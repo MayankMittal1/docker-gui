@@ -29,7 +29,14 @@
     width: 70%;
     margin: auto;
     text-align: center;
+}
 
+.check {
+    width: 30rem;
+}  
+
+check {
+    width: 1rem;
 }
 
 p {
@@ -38,4 +45,17 @@ p {
 
 h3 {
     color: aliceblue;
+}
+
+.variables {
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.light {
+    background-color: rgba(248, 245, 245, 0.192);   
+}
+
+.btn {
+    margin-left: 1rem;
 }

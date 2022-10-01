@@ -26,7 +26,7 @@ function NavBar(
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div className="fix">
       <Navbar {...args} expand dark fixed="true" color="black">
         <NavbarBrand href="/" className="logo">
           {" "}

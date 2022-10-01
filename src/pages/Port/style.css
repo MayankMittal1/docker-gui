@@ -1,0 +1,20 @@
+.port {
+  color: aliceblue;
+}
+
+.centre {
+  padding: 0;
+  padding-top: 2%;
+}
+
+.bar,
+.search {
+  display: inline;
+ 
+}
+
+h2 {
+  color: aliceblue;
+  margin-top: 3rem;
+  margin-left: -15rem;
+}
