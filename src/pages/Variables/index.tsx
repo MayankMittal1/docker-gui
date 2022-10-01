@@ -5,24 +5,7 @@ import "./style.css";
 function Variables() {
   return (
     <div className="page">
-      <Row>
-        <Col xs="3">
-          <div className="prog-page">
-            <div className="prog1">
-              Checkpoint 1<p>This is some other description</p>
-            </div>
-            <div className="prog1">
-              Checkpoint 2 <p>This is some other description</p>
-            </div>
-            <div className="prog1">
-              Checkpoint 3 <p>This is some other description</p>
-            </div>
-            <div className="prog1">
-              Checkpoint 4 <p>This is some other description</p>
-            </div>
-          </div>
-        </Col>
-        <Col xs="9">
+
           <div className="variables">
             <Row className="rows">
               <Col>
@@ -42,8 +25,7 @@ function Variables() {
              
             </Row>
           </div>
-        </Col>
-      </Row>
+      
     </div>
   );
 }

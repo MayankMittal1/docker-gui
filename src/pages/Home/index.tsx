@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import { Navbar, NavbarProps, Row } from "reactstrap";
 import "./style.css";
 import NavBar from "../Nav";
+import Search from "../Searchbar";
 import Port from "../Port";
+import Image from "../Image";
 import Variables from "../Variables";
+import Command from "../Command"
+import ProgressBar from "../Step1/ProgressBar";
 
 function Example(
   args: JSX.IntrinsicAttributes &
@@ -18,7 +22,10 @@ function Example(
     <>
       <div className="bigbox">
         <NavBar></NavBar>
-        <Port />
+        
+    
+
+        <Command></Command>
       </div>
     </>
   );
