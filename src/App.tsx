@@ -1,12 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
-import { Counter } from "./features/counter/Counter";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Home from "./pages/Home";
 import GetStarted from "./pages/GetStarted";
-
+import Form from "./pages/Form";
 
 function App() {
   return (
@@ -16,8 +14,8 @@ function App() {
           <Route path="/getStarted">
             <GetStarted />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/create">
+            <Form />
           </Route>
           <Route path="/">
             <Home />
@@ -26,14 +24,6 @@ function App() {
       </div>
     </Router>
   );
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }
 
 export default App;

@@ -1,13 +1,13 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { Button, Col, Row } from "reactstrap";
+import { Button, Row } from "reactstrap";
 import NavBar from "../NavBar/NavBar";
 const Home = () => {
   const history = useHistory();
   return (
     <>
       <NavBar />
-      <Row class="align-middle">
+      <Row className="align-middle">
         <div
           style={{
             fontSize: "70px",
@@ -21,7 +21,7 @@ const Home = () => {
         </div>
       </Row>
 
-      <Row class="align-middle">
+      <Row className="align-middle">
         <div
           style={{
             fontSize: "30px",

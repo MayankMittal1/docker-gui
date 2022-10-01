@@ -3,8 +3,13 @@ import { Button, Col, Row } from "reactstrap";
 import AppCard from "./AppCard";
 import NavBar from "../NavBar/NavBar";
 import { supportedApps } from "../../constants/supportedApps";
+import { useHistory } from "react-router-dom";
+import { loadApp } from "../../redux/appSlice";
+import { useAppDispatch } from "../../app/hooks";
 const GetStarted = () => {
   const [selected, setSelected] = useState<string>("");
+  const history = useHistory();
+  const dispatch = useAppDispatch();
   return (
     <>
       <NavBar />
@@ -27,9 +32,9 @@ const GetStarted = () => {
         <h1> SELECT YOUR APP!</h1>
       </Row>
       <Row>
-        {Object.keys(supportedApps).map((key) => {
+        {Object.keys(supportedApps).map((key, i) => {
           return (
-            <Col className="d-flex justify-content-center">
+            <Col className="d-flex justify-content-center" key={i}>
               <AppCard
                 isSelected={selected === key}
                 apps={supportedApps}
@@ -37,6 +42,7 @@ const GetStarted = () => {
                 select={() => {
                   setSelected(key);
                 }}
+                key={i}
               />
             </Col>
           );
@@ -52,7 +58,16 @@ const GetStarted = () => {
             justifyContent: "center",
           }}
         >
-          <Button color="primary" href="#" tag="a">
+          <Button
+            color="primary"
+            disabled={selected === ""}
+            onClick={() => {
+              if (selected && selected !== "") {
+                dispatch(loadApp(selected));
+                history.push(`/create/${selected}`);
+              }
+            }}
+          >
             Next
           </Button>
         </div>

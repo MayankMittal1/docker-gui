@@ -1,8 +1,8 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState, AppThunk } from "../../app/store";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { supportedApps } from "../../constants/supportedApps";
 const initialState = {
   app: {},
+  currentFile: [],
   isLoading: false,
 };
 
@@ -13,7 +13,7 @@ export const appSlice = createSlice({
   reducers: {
     // Use the PayloadAction type to declare the contents of `action.payload`
     loadApp: (state, action: PayloadAction<string>) => {
-      state.app = action.payload;
+      state.app = (supportedApps as any)[action.payload];
     },
   },
   // The `extraReducers` field lets the slice handle actions defined elsewhere,
@@ -34,7 +34,7 @@ export const appSlice = createSlice({
 });
 
 export const { loadApp } = appSlice.actions;
-
+export default appSlice.reducer;
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
 // i
