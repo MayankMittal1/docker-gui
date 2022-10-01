@@ -5,6 +5,8 @@ import "./style.css"
 function SearchBar(
 
 ) {
+
+
   return (
     <div className="centre">
       <Form>

@@ -6,48 +6,190 @@ function Image() {
   return (
     <div className="page">
       <Row>
-        <Col>
+        <Col xs="3">
           <div className="prog-page">
-            <div className="prog1">,</div>
-            <div className="prog1"></div>
-            <div className="prog1"></div>
-            <div className="prog1"></div>
+            <div className="prog1">
+              Checkpoint 1<p>This is some other description</p>
+            </div>
+            <div className="prog1">
+              Checkpoint 2 <p>This is some other description</p>
+            </div>
+            <div className="prog1">
+              Checkpoint 3 <p>This is some other description</p>
+            </div>
+            <div className="prog1">
+              Checkpoint 4 <p>This is some other description</p>
+            </div>
           </div>
         </Col>
-        <Col>
+        <Col xs="9">
           <div className="img-page">
             <Row className="rows">
-              <Col className="cols">
+              <Col className="cols" xs="4">
                 <div className="image">
                   <div>
                     <img src="" alt="img1" />
                   </div>
                 </div>
               </Col>
-              <Col className="cols">
+              <Col className="cols" xs="8">
                 <div className="image">
                   <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Debitis similique, eius quaerat quod quis minus nulla
-                    inventore dolor unde, voluptatem velit! Porro sapiente natus
-                    dolores eligendi illum excepturi fugit provident.
+                    <h3>TITLE</h3>
+                    <p>description</p>
                   </div>
                 </div>
               </Col>
-              <Col className="cols">
+            </Row>
+            <Row className="rows">
+              <Col className="cols" xs="4">
                 <div className="image">
                   <div>
                     <img src="" alt="img2" />
                   </div>
                 </div>
               </Col>
-              <Col className="cols">
+              <Col className="cols" xs="8">
                 <div className="image">
                   <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Debitis similique, eius quaerat quod quis minus nulla
-                    inventore dolor unde, voluptatem velit! Porro sapiente natus
-                    dolores eligendi illum excepturi fugit provident.
+                    <h3>TITLE</h3>
+                    <p>description</p>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+            <Row className="rows">
+              <Col className="cols" xs="4">
+                <div className="image">
+                  <div>
+                    <img src="" alt="img1" />
+                  </div>
+                </div>
+              </Col>
+              <Col className="cols" xs="8">
+                <div className="image">
+                  <div>
+                    <h3>TITLE</h3>
+                    <p>description</p>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+            <Row className="rows">
+              <Col className="cols" xs="4">
+                <div className="image">
+                  <div>
+                    <img src="" alt="img1" />
+                  </div>
+                </div>
+              </Col>
+              <Col className="cols" xs="8">
+                <div className="image">
+                  <div>
+                    <h3>TITLE</h3>
+                    <p>description</p>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+            <Row className="rows">
+              <Col className="cols" xs="4">
+                <div className="image">
+                  <div>
+                    <img src="" alt="img1" />
+                  </div>
+                </div>
+              </Col>
+              <Col className="cols" xs="8">
+                <div className="image">
+                  <div>
+                    <h3>TITLE</h3>
+                    <p>description</p>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+            <Row className="rows">
+              <Col className="cols" xs="4">
+                <div className="image">
+                  <div>
+                    <img src="" alt="img1" />
+                  </div>
+                </div>
+              </Col>
+              <Col className="cols" xs="8">
+                <div className="image">
+                  <div>
+                    <h3>TITLE</h3>
+                    <p>description</p>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+            <Row className="rows">
+              <Col className="cols" xs="4">
+                <div className="image">
+                  <div>
+                    <img src="" alt="img1" />
+                  </div>
+                </div>
+              </Col>
+              <Col className="cols" xs="8">
+                <div className="image">
+                  <div>
+                    <h3>TITLE</h3>
+                    <p>description</p>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+            <Row className="rows">
+              <Col className="cols" xs="4">
+                <div className="image">
+                  <div>
+                    <img src="" alt="img1" />
+                  </div>
+                </div>
+              </Col>
+              <Col className="cols" xs="8">
+                <div className="image">
+                  <div>
+                    <h3>TITLE</h3>
+                    <p>description</p>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+            <Row className="rows">
+              <Col className="cols" xs="4">
+                <div className="image">
+                  <div>
+                    <img src="" alt="img1" />
+                  </div>
+                </div>
+              </Col>
+              <Col className="cols" xs="8">
+                <div className="image">
+                  <div>
+                    <h3>TITLE</h3>
+                    <p>description</p>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+            <Row className="rows">
+              <Col className="cols" xs="4">
+                <div className="image">
+                  <div>
+                    <img src="" alt="img1" />
+                  </div>
+                </div>
+              </Col>
+              <Col className="cols" xs="8">
+                <div className="image">
+                  <div>
+                    <h3>TITLE</h3>
+                    <p>description</p>
                   </div>
                 </div>
               </Col>

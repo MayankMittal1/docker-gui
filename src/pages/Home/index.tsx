@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import {
-  Navbar,
-  NavbarProps,
-} from "reactstrap";
+import { Navbar, NavbarProps, Row } from "reactstrap";
+import "./style.css";
 import NavBar from "../Nav";
-import Searchbar from "../Searchbar"
-import Image from "../Image"
+import Port from "../Port";
+import Variables from "../Variables";
 
 function Example(
   args: JSX.IntrinsicAttributes &
@@ -18,13 +16,12 @@ function Example(
 
   return (
     <>
-    <NavBar></NavBar>
-    <Searchbar></Searchbar>
-    <Image></Image>
+      <div className="bigbox">
+        <NavBar></NavBar>
+        <Port />
+      </div>
     </>
-  ) 
-  
-  }
+  );
+}
 
 export default Example;
-

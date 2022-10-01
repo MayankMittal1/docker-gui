@@ -1,3 +1,7 @@
+.port {
+    color: aliceblue;
+}
+
 .centre {
     width: 50%;
     margin-left: 45%;
@@ -10,3 +14,9 @@
 .bar, .search {
     display: inline;
 }   
+
+h2 {
+    color: aliceblue;
+    margin-left: -10rem;
+    margin-top: 3rem;
+}
