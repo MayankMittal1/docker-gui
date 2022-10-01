@@ -77,6 +77,19 @@ export const supportedApps = {
       ],
     },
   },
+  node: {
+    name: "Node",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
+    description: "A JavaScript runtime built on Chrome's V8 JavaScript engine",
+    base_image_name: "node",
+  },
+  go: {
+    name: "Go",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png",
+    description:
+      "A statically typed, compiled programming language designed at Google",
+    base_image_name: "golang",
+  },
 };
 
 export const supportedBuildImages = {
