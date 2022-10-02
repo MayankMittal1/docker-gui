@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import GetStarted from "./pages/GetStarted";
 import Form from "./pages/Form";
+import Test from "./pages/test";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route path="/create/:app">
             <Form />
+          </Route>
+          <Route path="/test">
+            <Test />
           </Route>
           <Route path="/">
             <Home />
