@@ -15,7 +15,7 @@ import {
   NavbarProps,
 } from "reactstrap";
 import "./style_nav.css";
-
+import logo from "../../assets/logo.png";
 function NavBar(
   args: JSX.IntrinsicAttributes &
     JSX.IntrinsicClassAttributes<Navbar> &
@@ -29,15 +29,15 @@ function NavBar(
     <div className="fix">
       <Navbar {...args} expand dark fixed="true" color="black">
         <NavbarBrand href="/" className="logo">
-          {" "}
           <img
             alt="LOGO   "
-            src="/"
+            src={logo}
             style={{
               height: 40,
               width: 40,
             }}
           />
+          Koala_GUID
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

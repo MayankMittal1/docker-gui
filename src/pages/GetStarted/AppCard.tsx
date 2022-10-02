@@ -26,12 +26,14 @@ const AppCard = ({
                 padding: "8px",
                 width: "18rem",
                 cursor: "pointer",
+                color: "black",
               }
             : {
                 padding: "8px",
                 marginTop: "40px",
                 width: "18rem",
                 cursor: "pointer",
+                color: "black",
               }
         }
         onClick={select}
