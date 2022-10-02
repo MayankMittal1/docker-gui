@@ -2,7 +2,6 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { supportedApps } from "../../constants/supportedApps";
 const initialState = {
   app: {},
-  currentFile: [],
   tag: "latest",
   source: "./",
   destination: "./",
@@ -21,6 +20,7 @@ export const appSlice = createSlice({
     // Use the PayloadAction type to declare the contents of `action.payload`
     loadApp: (state, action: PayloadAction<string>) => {
       state.app = (supportedApps as any)[action.payload];
+      console.log(state.app);
     },
     setVar: (state, action: PayloadAction<{ type: string; val: string }>) => {
       (state as any)[action.payload.type] = action.payload.val;

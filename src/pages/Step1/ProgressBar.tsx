@@ -29,10 +29,9 @@ const ProgressBar = ({
               changeStep(i);
             }}
           >
-            <Row>
+            <Row className="mt-4">
               <Col>
                 <h5>{allSteps[key].name}</h5>
-                <p>{allSteps[key].description}</p>
               </Col>
               <Col className="col-2 d-flex align-items-center">
                 <div

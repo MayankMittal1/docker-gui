@@ -6,9 +6,12 @@ import NavBar from "../NavBar/NavBar";
 import SearchBar from "../steps/step1/SearchBar";
 import ProgressBar from "../Step1/ProgressBar";
 import InputField from "./Input";
+import { useAppSelector } from "../../app/hooks";
+import appSlice, { selectAppSlice } from "../../redux/appSlice";
 const Form = () => {
   const { app } = useParams();
   const [step, setStep] = React.useState(0);
+  const state = useAppSelector(selectAppSlice);
   return (
     <>
       <NavBar />
@@ -24,16 +27,16 @@ const Form = () => {
             <ProgressBar
               current={step}
               allSteps={(supportedApps as any)[app as string].steps}
-              steps={(supportedApps as any)[app as string].modes.development}
+              steps={Object.keys((supportedApps as any)[app as string].steps)}
               changeStep={setStep}
             />
           </Col>
           <Col>
             <InputField
-              steps={(supportedApps as any)[app as string].modes.development}
-              current={step}
               allSteps={(supportedApps as any)[app as string].steps}
+              steps={Object.keys((supportedApps as any)[app as string].steps)}
               changeStep={setStep}
+              current={step}
             />
           </Col>
         </Row>

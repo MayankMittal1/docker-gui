@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Col, Container, Input, Label, Row } from "reactstrap";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { selectAppSlice, setVar } from "../../../redux/appSlice";
+import { generate } from "../../../utils/generate";
 const InputField = ({
   steps,
   current,
@@ -14,6 +15,14 @@ const InputField = ({
   changeStep: any;
 }) => {
   const state = useAppSelector(selectAppSlice);
+  const finish = () => {
+    const element = document.createElement("a");
+    const file = new Blob(generate(state), { type: "text/text;charset=utf-8" });
+    element.href = URL.createObjectURL(file);
+    element.download = "Dockerfile";
+    document.body.appendChild(element);
+    element.click();
+  };
   const dispatch = useAppDispatch();
   return (
     <Container
@@ -32,6 +41,7 @@ const InputField = ({
         {allSteps[steps[current]].description}
       </Label>
       {allSteps[steps[current]].variables &&
+        !allSteps[steps[current]].multiple &&
         (allSteps[steps[current]].variables as Array<string>).map(
           (variable: string) => {
             return (
@@ -50,7 +60,13 @@ const InputField = ({
             );
           }
         )}
-      ;
+      {allSteps[steps[current]].variables &&
+        allSteps[steps[current]].multiple &&
+        (allSteps[steps[current]].variables as Array<string>).map(
+          (variable: string) => {
+            return <Input></Input>;
+          }
+        )}
       <p className="text-muted mt-5">
         *Do not change the default values unless needed
       </p>
@@ -69,14 +85,25 @@ const InputField = ({
               </Button>
             </Col>
             <Col>
-              <Button
-                color="primary"
-                onClick={() => {
-                  changeStep(current + 1);
-                }}
-              >
-                Next
-              </Button>
+              {current !== steps.length - 1 ? (
+                <Button
+                  color="primary"
+                  onClick={() => {
+                    changeStep(current + 1);
+                  }}
+                >
+                  Next
+                </Button>
+              ) : (
+                <Button
+                  color="primary"
+                  onClick={() => {
+                    finish();
+                  }}
+                >
+                  Finish
+                </Button>
+              )}
             </Col>
           </Row>
         </Col>
