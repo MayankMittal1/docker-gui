@@ -87,18 +87,55 @@ export const supportedApps = {
       },
     },
   },
-  node: {
-    name: "Node",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
-    description: "A JavaScript runtime built on Chrome's V8 JavaScript engine",
-    base_image_name: "node",
-  },
   go: {
     name: "Go",
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png",
     description:
       "A statically typed, compiled programming language designed at Google",
     base_image_name: "golang",
+    steps: {
+      step_1: {
+        name: "Choose Base Image",
+        description: "Choose the base image for your app",
+        command: "FROM golang:{{tag}}",
+        variables: ["tag"],
+      },
+      step_2: {
+        name: "Set Working Directory",
+        description: "Set the working directory for your app",
+        command: "WORKDIR {{directory}}",
+        variables: ["directory"],
+      },
+      step_3: {
+        name: "Copy Files",
+        description: "Copy the files from your local machine to the container",
+        command: "COPY {{source}} {{destination}}",
+        variables: ["source", "destination"],
+      },
+      step_4: {
+        name: "Install Dependencies",
+        description: "Install the dependencies for your app",
+        command: "RUN go mod download",
+      },
+      step_5: {
+        name: "Expose Port",
+        description: "Expose the port for your app",
+        command: "EXPOSE {{port}}",
+        variables: ["port"],
+      },
+      step_6: {
+        name: "Build",
+        description: "Build the app",
+        command: "RUN go build -o {{output}}",
+        variables: ["output"],
+      },
+      step_7: {
+        name: "Set Command",
+        description: "Set the command for your app",
+        command: "CMD {{command}}",
+        variables: ["command"],
+      },
+    },
   },
 };
 

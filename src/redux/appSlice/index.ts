@@ -7,6 +7,7 @@ const initialState = {
   destination: "./",
   directory: "/usr/app",
   port: "3000",
+  output: "main",
   env: {},
   command: "",
   isLoading: false,
