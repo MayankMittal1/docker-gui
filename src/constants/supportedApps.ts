@@ -9,21 +9,25 @@ export const supportedApps = {
         name: "Choose Base Image",
         description: "Choose the base image for your app",
         command: "FROM node:{{tag}}",
+        variables: ["tag"],
       },
       step_1_2: {
         name: "Choose Base Image",
         description: "Choose the base image for your app",
         command: "FROM node:{{tag}} AS builder",
+        variables: ["tag"],
       },
       step_2: {
         name: "Set Working Directory",
         description: "Set the working directory for your app",
         command: "WORKDIR {{directory}}",
+        variables: ["directory"],
       },
       step_3: {
         name: "Copy Files",
         description: "Copy the files from your local machine to the container",
         command: "COPY {{source}} {{destination}}",
+        variables: ["source", "destination"],
       },
       step_4_1: {
         name: "Install Dependencies",
@@ -39,6 +43,7 @@ export const supportedApps = {
         name: "Expose Port",
         description: "Expose the port for your app",
         command: "EXPOSE {{port}}",
+        variables: ["port"],
       },
       step_6: {
         name: "Set Environment Variables",
@@ -50,6 +55,7 @@ export const supportedApps = {
         name: "Set Command",
         description: "Set the command for your app",
         command: "CMD {{command}}",
+        variables: ["command"],
       },
       step_7_2: {
         name: "Run Build",

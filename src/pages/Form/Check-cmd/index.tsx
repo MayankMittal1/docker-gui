@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Form, FormGroup, Input, Row } from "reactstrap";
 import "./style.css";
-import ProgressBar from "../Step1/ProgressBar";
 
 function Check_cmd() {
   return (

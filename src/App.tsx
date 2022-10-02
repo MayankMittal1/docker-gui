@@ -14,7 +14,7 @@ function App() {
           <Route path="/getStarted">
             <GetStarted />
           </Route>
-          <Route path="/create">
+          <Route path="/create/:app">
             <Form />
           </Route>
           <Route path="/">

@@ -3,6 +3,13 @@ import { supportedApps } from "../../constants/supportedApps";
 const initialState = {
   app: {},
   currentFile: [],
+  tag: "latest",
+  source: "./",
+  destination: "./",
+  directory: "/usr/app",
+  port: "3000",
+  env: {},
+  command: "",
   isLoading: false,
 };
 
@@ -14,6 +21,9 @@ export const appSlice = createSlice({
     // Use the PayloadAction type to declare the contents of `action.payload`
     loadApp: (state, action: PayloadAction<string>) => {
       state.app = (supportedApps as any)[action.payload];
+    },
+    setVar: (state, action: PayloadAction<{ type: string; val: string }>) => {
+      (state as any)[action.payload.type] = action.payload.val;
     },
   },
   // The `extraReducers` field lets the slice handle actions defined elsewhere,
@@ -33,7 +43,8 @@ export const appSlice = createSlice({
   //   },
 });
 
-export const { loadApp } = appSlice.actions;
+export const { loadApp, setVar } = appSlice.actions;
+export const selectAppSlice = (state: any) => state.app;
 export default appSlice.reducer;
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
